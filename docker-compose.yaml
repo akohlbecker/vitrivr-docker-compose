@@ -16,12 +16,16 @@ services:
     build:
       context: ./cineast-docker/
       dockerfile: Dockerfile
+    depends_on:
+      - cottontail
     ports:
       - 4567:4567  # http api
       - 4568:4568  # https api
       - 4569:4569  # Prometheus
     volumes:
       - ./cineast-docker/config.json:/config.json
+      - ./cineast-docker/extraction_config.json:/extraction_config.json  # see sessionExtractionConfigLocation in config.json
+      - ./media:/data  # /data is refered to in extraction_config.json
 
   vitrivr-ng:
     container_name: vitrivr-ng

@@ -1,0 +1,43 @@
+{
+	"input":{
+		"path": "data/",
+		"depth": 3,
+		"skip": 0,
+		"id": {
+			"name": "SequentialObjectIdGenerator",
+			"properties": {}
+		}
+	},
+	"extractors":[
+		{"name": "AverageColor"},
+		{"name": "AverageColorARP44"},
+		{"name": "AverageColorGrid8"},
+		{"name": "AverageColorRaster"},
+		{"name": "AverageFuzzyHist"},
+		{"name": "CLD"},
+		{"name": "DominantEdgeGrid16"},
+		{"name": "EHD"},
+		{"name": "HPCP12Shingle"},
+		{"name": "MedianColor"},
+		{"name": "MedianColorGrid8"},
+		{"name": "OCRSearch"},
+		{"name": "InceptionResnetV2"},
+		{"name": "VisualTextCoEmbedding"}
+	],
+	"metadata": [
+		{"name": "TechnicalVideoMetadataExtractor"},
+		{"name": "EXIFMetadataExtractor"}
+	],
+	"exporters":[
+		{
+			"name": "ShotThumbnailsExporter",
+			"properties": {
+				"destination":"thumbnails/"
+			}
+		}
+	],
+	"database": {
+		"writer": "COTTONTAIL",
+		"selector": "COTTONTAIL"
+	}
+}
