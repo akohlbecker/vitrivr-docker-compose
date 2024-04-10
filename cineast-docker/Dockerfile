@@ -1,4 +1,4 @@
-FROM harbor.zkm.de/dockerhub-cache/library/eclipse-temurin:17-jdk
+FROM eclipse-temurin:17-jdk
 
 ARG VERSION=v3.12.4
 

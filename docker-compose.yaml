@@ -22,3 +22,11 @@ services:
       - 4569:4569  # Prometheus
     volumes:
       - ./cineast-docker/config.json:/config.json
+
+  vitrivr-ng:
+    container_name: vitrivr-ng
+    build:
+      context: ./vitrivr-ng-docker/
+      dockerfile: Dockerfile
+    ports:
+      - 88:80  # http
