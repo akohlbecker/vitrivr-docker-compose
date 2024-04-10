@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+
+  cottontail:
+    image: vitrivr/cottontaildb:latest
+    ports:
+      - 1865:1865
+    volumes:
+      - ./data/cottontail/:/cottontaildb-data
+      - ./config/cottontail/config.json:/cottontaildb-config/config.json  
