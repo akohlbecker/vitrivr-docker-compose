@@ -19,5 +19,14 @@
 * NOTE: need to switch-off the CLI in the config.json, since otherwise, it may cause problems when running detached, However it is unclear how this can be configuered or if this still is an issue, as the cli implementation has undergone significant changes --> **OPEN ISSUE**?
     * configuration: https://github.com/vitrivr/cottontaildb/wiki/Configuration 
         *   options are found in https://github.com/vitrivr/cottontaildb/blob/master/cottontaildb-dbms/src/main/kotlin/org/vitrivr/cottontail/config/Config.kt
+        
+### Cineast
+
+Cineast is a java application.
+Running cineast: https://github.com/vitrivr/cineast/wiki/Getting-Started
+
+configfile from https://github.com/vitrivr/cineast/blob/main/cineast.json
+
+
 
 

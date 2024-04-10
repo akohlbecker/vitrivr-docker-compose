@@ -3,9 +3,22 @@ version: '3.3'
 services:
 
   cottontail:
+    container_name: cottontail
     image: vitrivr/cottontaildb:latest
     ports:
       - 1865:1865
     volumes:
       - ./data/cottontail/:/cottontaildb-data
-      - ./config/cottontail/config.json:/cottontaildb-config/config.json  
+      - ./config/cottontail/config.json:/cottontaildb-config/config.json
+
+  cineast:
+    container_name: cineast
+    build:
+      context: ./cineast-docker/
+      dockerfile: Dockerfile
+    ports:
+      - 4567:4567  # http api
+      - 4568:4568  # https api
+      - 4569:4569  # Prometheus
+    volumes:
+      - ./cineast-docker/config.json:/config.json
