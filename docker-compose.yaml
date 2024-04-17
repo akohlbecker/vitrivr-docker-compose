@@ -24,7 +24,7 @@ services:
       - 4569:4569  # Prometheus
     volumes:
       # - ./cineast-docker/config-v3.7.2.json:/config.json
-      - ./cineast-docker/config.json:/config.json
+      - ./cineast-docker/config-v3.12.4.json:/config.json
       - ./cineast-docker/extraction_config.json:/extraction_config.json  # see sessionExtractionConfigLocation in config.json
       - ./media:/data  # /data is refered to in extraction_config.json
 
