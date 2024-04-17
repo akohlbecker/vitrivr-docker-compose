@@ -1,6 +1,6 @@
 FROM eclipse-temurin:17-jdk
 
-ARG VERSION=v3.12.4
+ARG VERSION=v3.12.4 # v3.7.2
 
 #ARG JAVA_OPTS=""
 ENV JAVA_OPTS=""
